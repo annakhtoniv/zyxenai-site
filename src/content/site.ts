@@ -41,6 +41,9 @@ export const site = {
   },
   copyLabels: { copy: 'Copy address', copied: 'Copied' },
 
+  /** Boot lines shown for about a second while the page loads. */
+  preloader: ['initialising systems…', 'seven systems found', 'declassifying'],
+
   announcement: {
     text: 'Seven systems in development. Early access is open.',
     href: '#access',
@@ -238,6 +241,7 @@ export const site = {
 
   cta: {
     headline: "Want to see what's behind the curtain?",
+    label: 'EARLY ACCESS',
     button: 'Email us for early access',
   },
 

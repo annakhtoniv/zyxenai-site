@@ -10,10 +10,10 @@ A fresh session should read `CLAUDE.md` first, then this file.
 |---|---|---|
 | 0 | Plan, file structure, codename collision check | Done, approved |
 | 1 | Foundation: setup, theme tokens, content file, navbar, hero with 3D scene, footer | Done, approved |
-| 2 | The Lab: pinned product showcase, bento grid, mobile card stack | Done, awaiting owner approval |
-| 3 | Story and CTA: manifesto, method, principles, final CTA | Not started |
-| 4 | Polish: preloader, micro-interactions, reduced motion, performance and accessibility audit | Not started |
-| 5 | Deploy prep: Pages workflow, CNAME, SEO files, README, acceptance checklist | Not started |
+| 2 | The Lab: pinned product showcase, bento grid, mobile card stack | Done, approved |
+| 3 | Story and CTA: manifesto, method, principles, final CTA | Done |
+| 4 | Polish: preloader, micro-interactions, reduced motion, performance and accessibility audit | Done |
+| 5 | Deploy prep: Pages workflow, CNAME, SEO files, README, acceptance checklist | Done, awaiting owner publish |
 
 ## How to preview
 
@@ -94,6 +94,18 @@ Decision: the 3D icons run only in the desktop showcase. Phones and the grid use
 
 Open item: GSAP licence. An automated scanner on the pull request flags GSAP's custom licence as unclassified. The owner has not yet said whether to keep GSAP. It is used in `src/lib/scroll.ts`, `ScrollProgress`, `Footer` and `LabShowcase`.
 
+## Phases 3 to 5 outcome
+
+The owner asked to finish quickly, so Phases 3, 4 and 5 were completed in one pass. The owner chose to keep GSAP.
+
+- Phase 3: `src/components/story/` (Marquee, Manifesto, Method, Principles, FinalCta). Temporary placeholders removed.
+- Phase 4: `Preloader` (1.5 s, skipped for reduced motion). On phones the hero 3D scene loads at first touch or scroll, not at page load. Lighthouse mobile on the built site: Performance 96, Accessibility 96, Best Practices 100, SEO 100.
+- Phase 5: `.github/workflows/deploy.yml` (push to main only), `404.html` (copy of the home page, made at build time), `robots.txt`, `sitemap.xml`, share image `public/og.png`, touch icon, Organization structured data, `README.md`.
+
+Publishing needs two owner actions: set Settings > Pages > Source to "GitHub Actions", then merge the pull request into `main`.
+
+Not done or not tested: real touch swiping on a phone, scroll smoothness on a mid-range laptop, screen reader pass. The "Sourcery review" check stays red because it cannot classify GSAP's licence.
+
 ## Open questions for the owner
 
-1. Keep GSAP (its licence is custom, free for commercial sites) or replace it?
+None blocking.

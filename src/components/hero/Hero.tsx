@@ -15,15 +15,25 @@ export function Hero() {
   const [sceneReady, setSceneReady] = useState(false)
   const [inView, setInView] = useState(true)
 
-  // Load the 3D scene once the browser is idle, and pause it when off screen.
+  // Load the 3D scene late so the text is never held up by it:
+  // on large screens once the browser is idle, on phones at the first touch or scroll.
+  // It is paused whenever the hero is off screen.
   useEffect(() => {
-    const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 200))
-    const handle = idle(() => setSceneReady(true))
     const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting))
     if (section.current) observer.observe(section.current)
+
+    const start = () => setSceneReady(true)
+    const events = ['pointerdown', 'touchstart', 'scroll', 'keydown'] as const
+    let timer = 0
+    if (window.matchMedia('(min-width: 768px) and (pointer: fine)').matches) {
+      timer = window.setTimeout(start, 1600) // after the preloader has cleared
+    } else {
+      events.forEach((name) => window.addEventListener(name, start, { once: true, passive: true }))
+    }
     return () => {
       observer.disconnect()
-      ;(window.cancelIdleCallback ?? window.clearTimeout)(handle as number)
+      window.clearTimeout(timer)
+      events.forEach((name) => window.removeEventListener(name, start))
     }
   }, [])
 
