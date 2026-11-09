@@ -8,26 +8,34 @@ A fresh session should read `CLAUDE.md` first, then this file.
 
 | Phase | Scope | Status |
 |---|---|---|
-| 0 | Plan, file structure, codename collision check | Done, awaiting owner approval |
-| 1 | Foundation: setup, theme tokens, content file, navbar, hero with 3D scene, footer | Not started |
+| 0 | Plan, file structure, codename collision check | Done, approved |
+| 1 | Foundation: setup, theme tokens, content file, navbar, hero with 3D scene, footer | Done, awaiting owner approval |
 | 2 | The Lab: pinned product showcase, bento grid, mobile card stack | Not started |
 | 3 | Story and CTA: manifesto, method, principles, final CTA | Not started |
 | 4 | Polish: preloader, micro-interactions, reduced motion, performance and accessibility audit | Not started |
 | 5 | Deploy prep: Pages workflow, CNAME, SEO files, README, acceptance checklist | Not started |
 
+## How to preview
+
+```
+npm install
+npm run dev        # live preview while editing
+npm run build && npm run preview   # the exact files that would be published
+```
+
 ## Phase 0 outcome
 
-### Codename collision check
+### Codenames
 
-All three codenames share a name with existing products in the same category. None is a household name, but RITUAL is the closest clash.
+The owner chose to replace all three original codenames. In use now (each is one line in `src/content/site.ts`):
 
-| Codename | Finding | Alternatives |
+| # | Codename | Check result |
 |---|---|---|
-| RITUAL | Clash: an established guided wellbeing practices app uses this exact name, plus several habit trackers | HEARTH, VIGIL, COVENANT |
-| NOCTURNE | Mild: a few small sleep apps use this exact name | UMBRA, VESPER, HALCYON |
-| MERIDIAN | Mild: a construction project management vendor and a few small tools use this name | THROUGHLINE, PLUMBLINE, KEEL |
+| 01 | VIGIL | No same-category product found |
+| 02 | UMBRA | No sleep app found under this name (a screen-dimming utility has a similar name) |
+| 03 | PLUMBLINE | No project management product found |
 
-**Decision needed from the owner** before Phase 1.
+Rejected after checking: HEARTH (a small meditation app), THROUGHLINE (a Jira add-on), VESPER and HALCYON (small sleep and sound apps). The owner confirmed the seven status chips and that there is no DESIGN.md.
 
 ### Decisions taken (no owner input needed)
 
@@ -58,8 +66,17 @@ src/
 README.md                      plain-language guide: edit content, run locally, publish
 ```
 
+## Phase 1 outcome
+
+Built: project setup, `src/theme/tokens.ts`, `src/content/site.ts` (all copy for every phase), announcement bar, floating navbar with full-screen mobile menu, hero with lazy-loaded 3D core and shader backdrop, scroll progress line, smooth scroll, footer with giant wordmark that fills on scroll, Privacy and Terms placeholder pages, favicon.
+
+Notes for later phases:
+
+- `src/components/layout/UpcomingSections.tsx` is a temporary stand-in for Phase 2 and 3 sections. Delete each entry as the real section lands. Section ids to keep: `vision`, `lab`, `academy`, `method`, `principles`, `access`.
+- Checked at 1440, 390 and 360 px wide: no sideways scroll, no console errors.
+- Phase 4: the shared JavaScript file is about 123 kB compressed; split GSAP and Framer Motion further if Lighthouse needs it. Trim unused font subsets.
+- Phase 5: `CNAME` now lives in `public/`. GitHub Pages must be switched from "deploy from branch" to "GitHub Actions" when the owner publishes, or the raw source would be served. Add `404.html`.
+
 ## Open questions for the owner
 
-1. Codenames: keep or replace (see table above).
-2. Confirm the seven status chips are still accurate.
-3. Is there a DESIGN.md to attach? If not, the Section 6 tokens are used.
+1. Confirm the codenames VIGIL, UMBRA and PLUMBLINE, or name others.

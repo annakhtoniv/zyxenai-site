@@ -4,7 +4,7 @@ This repository is the public website for ZYXENAI (zyxenai.com). The repository 
 
 ## Hard rules (non-negotiable)
 
-1. **Codenames only.** Three products appear only as RITUAL, NOCTURNE, and MERIDIAN (or replacements the owner approves). Their real names, real domains, and any link to their live apps must not appear anywhere: copy, alt text, meta tags, file names, code comments, commit messages, sitemap.
+1. **Codenames only.** Three products appear only as VIGIL, UMBRA, and PLUMBLINE (or replacements the owner approves). Their real names, real domains, and any link to their live apps must not appear anywhere: copy, alt text, meta tags, file names, code comments, commit messages, sitemap.
 2. **No invented proof.** No fake testimonials, client logos, user counts, revenue figures, awards, or "trusted by" strips. If the owner did not supply a number, it does not go on the site.
 3. **Honest status.** Every product carries the status chip defined in `src/content/site.ts`. Never describe an in-build product as live or available.
 4. **No personal identity.** No founder name, photo, biography, employer, or personal phone number. The site speaks as "ZYXENAI" and "we". The only exception is the contact address `vinoth@zyxenai.com`.

@@ -1,53 +1,18 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ZYXENAI | Coming soon</title>
-<meta name="description" content="ZYXENAI. AI and automation. Coming soon.">
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0d14'/%3E%3Cpath d='M9 10h14L9 22h14' stroke='%237c8cff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<style>
-  :root { --bg:#07080d; --fg:#eef0f7; --muted:#8a90a6; --a:#7c8cff; --b:#3ee0c8; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  html,body { height:100%; }
-  body {
-    background:var(--bg); color:var(--fg);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
-    display:grid; place-items:center; overflow:hidden; padding:16px;
-  }
-  .glow {
-    position:fixed; width:70vmax; height:70vmax; border-radius:50%;
-    background:radial-gradient(circle, rgba(124,140,255,.22), rgba(62,224,200,.08) 45%, transparent 70%);
-    filter:blur(40px); animation:drift 14s ease-in-out infinite alternate; z-index:0;
-  }
-  @keyframes drift { from { transform:translate(-12%,-8%) scale(1); } to { transform:translate(12%,8%) scale(1.15); } }
-  main { position:relative; z-index:1; text-align:center; max-width:640px; }
-  h1 {
-    font-size:clamp(2.6rem, 9vw, 5.5rem); font-weight:800; letter-spacing:.14em;
-    background:linear-gradient(90deg, var(--fg), var(--a) 55%, var(--b));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
-  .tag { margin-top:14px; color:var(--muted); font-size:clamp(1rem, 2.6vw, 1.2rem); letter-spacing:.04em; }
-  .pill {
-    display:inline-flex; align-items:center; gap:10px; margin-top:36px; padding:10px 20px;
-    border:1px solid rgba(255,255,255,.12); border-radius:999px; background:rgba(255,255,255,.04);
-    font-size:.95rem; letter-spacing:.2em; text-transform:uppercase;
-  }
-  .dot { width:8px; height:8px; border-radius:50%; background:var(--b); box-shadow:0 0 12px var(--b); animation:pulse 1.8s ease-in-out infinite; }
-  @keyframes pulse { 50% { opacity:.3; } }
-  footer { position:fixed; bottom:20px; left:0; right:0; text-align:center; color:var(--muted); font-size:.8rem; z-index:1; }
-  @media (prefers-reduced-motion: reduce) { .glow, .dot { animation:none; } }
-</style>
-</head>
-<body>
-  <div class="glow" aria-hidden="true"></div>
-  <main>
-    <h1>ZYXENAI</h1>
-    <p class="tag">Intelligent automation for modern business.</p>
-    <div class="pill"><span class="dot"></span>Coming soon</div>
-  </main>
-  <footer>&copy; <span id="y">2026</span> ZYXENAI</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZYXENAI | AI systems lab, Dubai</title>
+    <meta
+      name="description"
+      content="ZYXENAI is an AI systems lab in Dubai. Seven systems in development. Early access is open."
+    />
+    <meta name="theme-color" content="#05060A" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
