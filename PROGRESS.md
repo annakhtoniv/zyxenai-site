@@ -9,8 +9,8 @@ A fresh session should read `CLAUDE.md` first, then this file.
 | Phase | Scope | Status |
 |---|---|---|
 | 0 | Plan, file structure, codename collision check | Done, approved |
-| 1 | Foundation: setup, theme tokens, content file, navbar, hero with 3D scene, footer | Done, awaiting owner approval |
-| 2 | The Lab: pinned product showcase, bento grid, mobile card stack | Not started |
+| 1 | Foundation: setup, theme tokens, content file, navbar, hero with 3D scene, footer | Done, approved |
+| 2 | The Lab: pinned product showcase, bento grid, mobile card stack | Done, awaiting owner approval |
 | 3 | Story and CTA: manifesto, method, principles, final CTA | Not started |
 | 4 | Polish: preloader, micro-interactions, reduced motion, performance and accessibility audit | Not started |
 | 5 | Deploy prep: Pages workflow, CNAME, SEO files, README, acceptance checklist | Not started |
@@ -77,6 +77,23 @@ Notes for later phases:
 - Phase 4: the shared JavaScript file is about 123 kB compressed; split GSAP and Framer Motion further if Lighthouse needs it. Trim unused font subsets.
 - Phase 5: `CNAME` now lives in `public/`. GitHub Pages must be switched from "deploy from branch" to "GitHub Actions" when the owner publishes, or the raw source would be served. Add `404.html`.
 
+## Phase 2 outcome
+
+Built in `src/components/lab/`:
+
+- `Lab.tsx` picks the version: pinned showcase (screens 1024 px and wider), swipeable card deck (smaller screens), or a still list (large screen with reduced motion).
+- `LabShowcase.tsx`: tall scroll track with a sticky full-screen stage. Scroll position selects the product. Rail at the bottom jumps to any product. Focusing a hidden product's link scrolls to it.
+- `LabIconScene.tsx`: seven glossy 3D icons built from primitives, one canvas, lazy-loaded, paused off screen.
+- `InterfaceGlimpse.tsx`: seven abstract mock-ups with redaction bars and a blurred lower half. Labels come from `site.lab.glimpse`.
+- `BentoGrid.tsx`: all seven as cards with cursor glow and tilt. Each card's id is the product id, so `#academy` lands on the Academy card.
+- Shared: `ScrambleText`, `Reveal`, `StatusChip`, `ProductGlyph` (flat icons used on phones and in the grid).
+
+Checked at 1920, 1440, 1024 and 390 px wide and in reduced-motion mode: no sideways scroll, no console errors.
+
+Decision: the 3D icons run only in the desktop showcase. Phones and the grid use flat line icons to save battery and load time.
+
+Open item: GSAP licence. An automated scanner on the pull request flags GSAP's custom licence as unclassified. The owner has not yet said whether to keep GSAP. It is used in `src/lib/scroll.ts`, `ScrollProgress`, `Footer` and `LabShowcase`.
+
 ## Open questions for the owner
 
-1. Confirm the codenames VIGIL, UMBRA and PLUMBLINE, or name others.
+1. Keep GSAP (its licence is custom, free for commercial sites) or replace it?

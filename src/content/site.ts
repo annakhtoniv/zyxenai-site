@@ -88,6 +88,24 @@ export const site = {
     intro: "Seven systems. Some you can see. Some you'll have to ask about.",
     codenameTag: 'CODENAME',
     lookInside: 'Request a look inside',
+    railLabel: 'Jump to',
+    swipeHint: 'Swipe',
+    gridLabel: 'ALL SEVEN',
+    /**
+     * Labels inside the abstract interface mock-ups. Decorative only:
+     * the mock-ups are illustrations with fictional data, not screenshots.
+     */
+    glimpse: {
+      preview: 'PREVIEW',
+      classified: 'CLASSIFIED',
+      flame: ['DAY 17 / 40', 'TODAY', 'COHORT'],
+      moon: ['TONIGHT', 'WIND DOWN', 'SESSIONS'],
+      compass: ['BACKLOG', 'IN PROGRESS', 'DONE', 'TIMELINE'],
+      gear: ['PROBLEM', 'BLUEPRINT', 'BUILD', 'APPROVE'],
+      funnel: ['NEW', 'QUALIFIED', 'BOOKED'],
+      radar: ['PLAN', 'DESIGN', 'BUILD', 'TEST', 'RELEASE'],
+      book: ['LESSON', 'TUTOR', 'PROGRESS'],
+    },
   },
 
   products: [

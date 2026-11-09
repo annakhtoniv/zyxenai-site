@@ -1,12 +1,10 @@
 /**
- * TEMPORARY. Stand-ins for the sections built in Phases 2 and 3, so the menu
+ * TEMPORARY. Stand-ins for the sections built in Phase 3, so the menu
  * links have somewhere to land and the page has length to scroll.
  * This file is deleted as the real sections arrive.
  */
 const upcoming = [
   { id: 'vision', name: 'Marquee and vision', phase: 3 },
-  { id: 'lab', name: 'The Lab: seven systems', phase: 2 },
-  { id: 'academy', name: 'Bento grid (Academy lands here)', phase: 2 },
   { id: 'method', name: 'How we build', phase: 3 },
   { id: 'principles', name: 'Principles', phase: 3 },
   { id: 'access', name: 'Final call to action', phase: 3 },

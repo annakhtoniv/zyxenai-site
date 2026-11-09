@@ -5,6 +5,7 @@ import { Navbar } from './components/layout/Navbar'
 import { ScrollProgress } from './components/layout/ScrollProgress'
 import { UpcomingSections } from './components/layout/UpcomingSections'
 import { Hero } from './components/hero/Hero'
+import { Lab } from './components/lab/Lab'
 import { useReducedMotion } from './hooks/useReducedMotion'
 import { startSmoothScroll } from './lib/scroll'
 
@@ -30,6 +31,7 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
+        <Lab />
         <UpcomingSections />
       </main>
       <Footer />

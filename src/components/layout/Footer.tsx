@@ -37,7 +37,7 @@ export function Footer() {
           <ul className="space-y-2.5">
             {site.products.map((p) => (
               <li key={p.id}>
-                <a href="/#lab" className={linkClass}>
+                <a href={`/#${p.id}`} className={linkClass}>
                   {p.name}
                 </a>
               </li>

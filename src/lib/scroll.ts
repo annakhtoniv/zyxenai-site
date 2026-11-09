@@ -27,4 +27,10 @@ export function lockScroll(locked: boolean): void {
   else lenis?.start()
 }
 
+/** Scrolls the page to a vertical position, smoothly when smooth scrolling is on. */
+export function scrollToY(y: number): void {
+  if (lenis) lenis.scrollTo(y)
+  else window.scrollTo({ top: y })
+}
+
 export { gsap, ScrollTrigger }
