@@ -73,6 +73,12 @@ export const site = {
     scrollCue: 'Scroll',
     /** Small texture labels in the corners of the hero. */
     details: ['25.2048 N / 55.2708 E', 'SYSTEMS 07', 'STATUS: DECLASSIFYING'],
+    /** Labels inside the hero diagram. */
+    diagram: {
+      input: { tag: 'INPUT', title: 'Slow, manual work' },
+      core: { title: 'ZYXENAI agents', tag: 'HUMAN APPROVAL', steps: ['Map', 'Build', 'Check'] },
+      outputs: ['Automation', 'Delivery', 'Learning'],
+    },
   },
 
   marquee: ['AGENTS', 'AUTOMATION', 'VOICE', 'LEARNING', 'DELIVERY', 'WELLBEING'],

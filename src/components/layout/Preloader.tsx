@@ -29,7 +29,7 @@ export function Preloader() {
             className="label-mono text-muted opacity-0 animate-[fadein_0.15s_ease-out_forwards]"
             style={{ animationDelay: `${i * 0.16}s` }}
           >
-            <span className="text-cyan">{'> '}</span>
+            <span className="text-brand">{'> '}</span>
             {line}
           </p>
         ))}

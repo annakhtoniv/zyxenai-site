@@ -60,7 +60,7 @@ The custom domain is set by `public/CNAME`. Vercel is not used.
 |---|---|
 | `src/content/site.ts` | All text, products, statuses, links |
 | `src/theme/tokens.ts` | All colours, fonts, timings |
-| `src/components/hero/` | Top of the page and its 3D scene |
+| `src/components/hero/` | Top of the page and its architecture diagram |
 | `src/components/lab/` | The product showcase, card deck and grid |
 | `src/components/story/` | Marquee, vision, method, principles, final call to action |
 | `src/components/layout/` | Announcement bar, menu, footer, preloader |

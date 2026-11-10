@@ -19,8 +19,8 @@ export function Lab() {
   return (
     <section id="lab" aria-labelledby="lab-title" className="relative scroll-mt-24 pt-28">
       <Reveal className="mx-auto max-w-page px-5 pb-14 sm:px-8 lg:pb-4">
-        <p className="label-mono mb-6 flex items-center gap-3 text-cyan">
-          <span aria-hidden="true" className="h-px w-8 bg-cyan" />
+        <p className="label-mono mb-6 flex items-center gap-3 text-brand">
+          <span aria-hidden="true" className="h-px w-8 bg-brand" />
           {site.lab.label}
         </p>
         <h2 id="lab-title" className="max-w-4xl font-display text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.02] tracking-[-0.035em]">

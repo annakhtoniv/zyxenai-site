@@ -12,8 +12,8 @@ export function Principles() {
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {site.principles.items.map((item, i) => (
           <li key={item.title}>
-            <Reveal order={i} className="glass flex h-full flex-col rounded-card p-6">
-              <p aria-hidden="true" className="label-mono text-amber">
+            <Reveal order={i} className="card flex h-full flex-col rounded-card p-6">
+              <p aria-hidden="true" className="label-mono text-violet">
                 P/0{i + 1}
               </p>
               <h3 className="mt-10 font-display text-xl font-semibold leading-snug tracking-tight">{item.title}</h3>

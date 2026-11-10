@@ -34,7 +34,7 @@ export function Marquee() {
             {words.map((w) => (
               <span key={w} className="flex items-center font-display text-2xl font-medium tracking-tight text-muted sm:text-3xl">
                 <span className="px-6">{w}</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
+                <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               </span>
             ))}
           </div>

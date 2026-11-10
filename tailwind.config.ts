@@ -14,6 +14,7 @@ export default {
         mono: [...tokens.fonts.mono],
       },
       borderRadius: tokens.radii,
+      boxShadow: tokens.shadows,
       maxWidth: { page: tokens.layout.pageWidth },
     },
   },

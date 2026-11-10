@@ -5,24 +5,31 @@
  */
 export const tokens = {
   colors: {
-    canvas: '#05060A', // page background
-    surface: '#0C0F17', // cards and panels
-    line: 'rgba(255, 255, 255, 0.09)', // 1px hairline borders
-    ink: '#EEF1F8', // main text
-    muted: '#969DB3', // secondary text
-    cyan: '#22E3FF', // primary accent
-    violet: '#7B5CFF', // secondary accent
-    amber: '#FFB547', // signal colour for status and highlights
+    // "Electric Indigo & Glacier" light theme.
+    canvas: '#FFFFFF', // page background
+    surface: '#F3F4F6', // Glacier Ice: raised panels and quiet bands
+    line: '#E5E7EB', // 1px borders and dividers
+    ink: '#111827', // Ink Black: headings and body text
+    muted: '#4B5563', // secondary text
+    faint: '#9CA3AF', // decorative strokes only, too light for body text
+    brand: '#4F46E5', // Electric Indigo: buttons, links, focus rings
+    brandHover: '#4338CA', // button hover
+    tint: '#EEF2FF', // light indigo behind icons
+    violet: '#7C3AED', // Deep Violet: tags, step numbers, highlights
+  },
+  shadows: {
+    card: '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)',
   },
   /** One accent hue per product. Referenced by name from src/content/site.ts. */
   productAccents: {
-    saffron: '#F2C230',
-    indigo: '#5470FF',
-    cyan: '#22E3FF',
-    violet: '#7B5CFF',
-    emerald: '#2EE6A0',
-    amber: '#FF9F3D',
-    rose: '#FF6B9A',
+    // Deep enough to read as text on white (WCAG AA).
+    saffron: '#B45309',
+    indigo: '#4F46E5',
+    cyan: '#0E7490',
+    violet: '#7C3AED',
+    emerald: '#047857',
+    amber: '#C2410C',
+    rose: '#BE185D',
   },
   fonts: {
     display: ['"Space Grotesk Variable"', 'system-ui', 'sans-serif'],

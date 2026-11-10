@@ -2,7 +2,7 @@
 
 A fresh session should read `CLAUDE.md` first, then this file.
 
-**Working branch:** `claude/upbeat-clarke-yujj9f` (plays the role of `dev` in the brief). Never push to `main`.
+**Working branch:** `claude/light-theme-indigo-glacier` (the earlier branch `claude/upbeat-clarke-yujj9f` is merged and live). Never push to `main`.
 
 ## Phases
 
@@ -105,6 +105,20 @@ The owner asked to finish quickly, so Phases 3, 4 and 5 were completed in one pa
 Publishing needs two owner actions: set Settings > Pages > Source to "GitHub Actions", then merge the pull request into `main`.
 
 Not done or not tested: real touch swiping on a phone, scroll smoothness on a mid-range laptop, screen reader pass. The "Sourcery review" check stays red because it cannot classify GSAP's licence.
+
+## Light theme: "Electric Indigo & Glacier" (10 Nov 2026)
+
+The owner asked to move the site from the dark theme to a high-contrast light theme. Status: done on the working branch, awaiting owner review and merge.
+
+- `src/theme/tokens.ts`: white canvas, Glacier Ice surface `#F3F4F6`, Ink Black text `#111827`, muted `#4B5563`, Electric Indigo `#4F46E5` (hover `#4338CA`), Deep Violet `#7C3AED`, borders `#E5E7EB`, one soft card shadow. The old cyan and amber tokens are gone (`brand` and `violet` replace them). Product accent hues were deepened so they pass contrast on white.
+- `.glass` became `.card` (white, hairline border, soft shadow). Film grain removed.
+- Navbar is now a full-width white bar with blur and a bottom hairline, not a floating pill.
+- Hero: the dark 3D particle scene (`HeroScene.tsx`) was removed and replaced by `HeroDiagram.tsx`, a light architecture diagram. Its labels are in `site.hero.diagram`. The 3D product icons in the Lab remain.
+- Buttons: solid indigo primary; white secondary with a border. Step numbers and status chips are violet pills. Bento icons sit in light indigo squares.
+- Favicon, touch icon, share image and browser theme colour redrawn for the light theme.
+- Checked: build passes; no console errors or sideways scroll at 1440 and 390 px; every text and background pair measured at 4.5:1 or better.
+- Not done: the request mentioned a contact form. The site has none by rule (email buttons only), so nothing was added.
+- Not re-run: Lighthouse, real phone, screen reader.
 
 ## Open questions for the owner
 

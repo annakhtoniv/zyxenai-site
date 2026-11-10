@@ -34,14 +34,14 @@ export function Method() {
         <span
           ref={line}
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 hidden h-px origin-left bg-gradient-to-r from-cyan to-violet lg:block"
+          className="absolute inset-x-0 top-0 hidden h-px origin-left bg-gradient-to-r from-brand to-violet lg:block"
         />
         <ol className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {site.method.steps.map((step, i) => (
             <li key={step.title}>
               <Reveal order={i} className="relative lg:pt-10">
-                <span aria-hidden="true" className="absolute -top-1 left-0 hidden h-2 w-2 rounded-full bg-cyan lg:block" />
-                <p aria-hidden="true" className="label-mono mb-4 text-cyan">
+                <span aria-hidden="true" className="absolute -top-1 left-0 hidden h-2 w-2 rounded-full bg-brand lg:block" />
+                <p aria-hidden="true" className="label-mono mb-4 inline-flex rounded-pill bg-violet/[0.08] px-3 py-1 text-violet">
                   0{i + 1}
                 </p>
                 <h3 className="font-display text-2xl font-semibold tracking-tight">{step.title}</h3>

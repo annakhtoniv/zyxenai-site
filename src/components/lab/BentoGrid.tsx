@@ -36,16 +36,18 @@ function BentoCard({ product, wide }: { product: Product; wide: boolean }) {
       style={accentStyle(product)}
       onPointerMove={onMove}
       onPointerLeave={onLeave}
-      className="glass group relative flex h-full scroll-mt-28 flex-col overflow-hidden rounded-card p-6 transition-transform duration-300 ease-out will-change-transform"
+      className="card group relative flex h-full scroll-mt-28 flex-col overflow-hidden rounded-card p-6 transition-transform duration-300 ease-out will-change-transform"
     >
       <div
         ref={glow}
         aria-hidden="true"
-        className="bg-accent pointer-events-none absolute left-0 top-0 h-80 w-80 rounded-full opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"
+        className="bg-accent pointer-events-none absolute left-0 top-0 h-80 w-80 rounded-full opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-10"
       />
       <div className="relative flex items-start justify-between gap-4">
         <span className="label-mono text-accent">{product.index}</span>
-        <ProductGlyph icon={product.icon} className="text-accent h-9 w-9" />
+        <span className="grid h-12 w-12 place-items-center rounded-xl bg-tint">
+          <ProductGlyph icon={product.icon} className="h-7 w-7 text-brand" />
+        </span>
       </div>
       <h3 className={`relative mt-8 font-display text-2xl font-semibold tracking-tight ${product.codename ? 'font-mono tracking-normal' : ''}`}>
         {product.name}

@@ -15,7 +15,7 @@ export function LabList() {
         <article
           key={p.id}
           style={accentStyle(p)}
-          className="glass border-accent grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-center gap-12 rounded-card p-10"
+          className="card border-accent grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-center gap-12 rounded-card p-10"
         >
           <div>
             <div className="mb-5 flex items-center gap-5">
