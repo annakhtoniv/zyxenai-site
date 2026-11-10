@@ -6,7 +6,7 @@ import { tokens } from '../../theme/tokens'
  * THE LOGO. To swap in a real logo later, replace the SVG in this one file.
  * (The browser tab icon is separate: public/favicon.svg.)
  *
- * variant "default": white letters with the accent "AI".
+ * variant "default": ink letters with the accent "AI".
  * variant "outline" and "gradient": used layered in the footer.
  */
 export function Wordmark({
@@ -41,7 +41,7 @@ export function Wordmark({
         <defs>
           <linearGradient id={id} x1="0" x2="1" y1="0" y2="0">
             <stop offset="0" stopColor={tokens.colors.ink} />
-            <stop offset="0.55" stopColor={tokens.colors.cyan} />
+            <stop offset="0.55" stopColor={tokens.colors.brand} />
             <stop offset="1" stopColor={tokens.colors.violet} />
           </linearGradient>
         </defs>
@@ -49,11 +49,11 @@ export function Wordmark({
       {variant === 'default' && (
         <text {...common} fill="currentColor">
           {main}
-          <tspan fill={tokens.colors.cyan}>{accent}</tspan>
+          <tspan fill={tokens.colors.brand}>{accent}</tspan>
         </text>
       )}
       {variant === 'outline' && (
-        <text {...common} fill="none" stroke="rgba(255,255,255,0.22)" strokeWidth={0.6}>
+        <text {...common} fill="none" stroke={tokens.colors.faint} strokeWidth={0.6}>
           {main + accent}
         </text>
       )}

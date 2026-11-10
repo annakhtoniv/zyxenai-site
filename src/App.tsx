@@ -28,7 +28,7 @@ export default function App() {
       <Preloader />
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[70] focus:rounded-pill focus:bg-cyan focus:px-4 focus:py-2 focus:text-canvas"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[70] focus:rounded-pill focus:bg-brand focus:px-4 focus:py-2 focus:text-canvas"
       >
         Skip to content
       </a>
@@ -45,7 +45,6 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
-      <div aria-hidden="true" className="grain pointer-events-none fixed inset-0 z-[55]" />
     </>
   )
 }

@@ -53,7 +53,7 @@ export function LabShowcase() {
             <div
               key={p.id}
               style={accentStyle(p)}
-              className={`absolute inset-0 bg-[radial-gradient(55%_60%_at_74%_45%,color-mix(in_srgb,var(--accent)_17%,transparent),transparent_70%)] transition-opacity duration-700 ${
+              className={`absolute inset-0 bg-[radial-gradient(55%_60%_at_74%_45%,color-mix(in_srgb,var(--accent)_9%,transparent),transparent_70%)] transition-opacity duration-700 ${
                 i === active ? 'opacity-100' : 'opacity-0'
               }`}
             />

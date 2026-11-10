@@ -36,7 +36,7 @@ export function Manifesto() {
           <p
             key={statement}
             className={`max-w-5xl font-display text-[clamp(1.9rem,5.2vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.035em] ${
-              i === site.vision.statements.length - 1 ? 'text-cyan' : ''
+              i === site.vision.statements.length - 1 ? 'text-brand' : ''
             }`}
           >
             {statement.split(' ').map((word, j) => (

@@ -15,12 +15,12 @@
     overflow-x: hidden;
   }
   ::selection {
-    background: theme('colors.cyan');
+    background: theme('colors.brand');
     color: theme('colors.canvas');
   }
   /* One visible focus style for every interactive element. */
   :focus-visible {
-    outline: 2px solid theme('colors.cyan');
+    outline: 2px solid theme('colors.brand');
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -30,17 +30,11 @@
   /* Faint grid that fades toward the edges. */
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      linear-gradient(to right, rgba(17, 24, 39, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 24, 39, 0.05) 1px, transparent 1px);
     background-size: 64px 64px;
     -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
     mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
-  }
-  /* Film grain over the whole page. */
-  .grain {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: 0.07;
-    mix-blend-mode: overlay;
   }
   .label-mono {
     font-family: theme('fontFamily.mono');
@@ -48,15 +42,19 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
-  .glass {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+  /* The standard card: white surface, hairline border, soft shadow. */
+  .card {
+    background: theme('colors.canvas');
     border: 1px solid theme('colors.line');
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    box-shadow: theme('boxShadow.card');
   }
 }
 
 @keyframes blink {
   50% { opacity: 0; }
+}
+@keyframes pulse-soft {
+  50% { opacity: 0.35; }
 }
 @keyframes cue {
   0% { transform: translateY(-100%); }
@@ -87,7 +85,7 @@
     -webkit-text-stroke: 1px color-mix(in srgb, var(--accent) 60%, transparent);
   }
   .scanlines {
-    background-image: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 4px);
+    background-image: repeating-linear-gradient(to bottom, rgba(17, 24, 39, 0.025) 0 1px, transparent 1px 4px);
   }
   .no-scrollbar { scrollbar-width: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }

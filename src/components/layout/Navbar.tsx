@@ -1,38 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { mailto, site } from '../../content/site'
 import { Button } from '../ui/Button'
 import { Wordmark } from '../ui/Wordmark'
 import { MobileMenu } from './MobileMenu'
 
-/** Floating glass pill. Condenses and gains blur once the page has scrolled. */
+/** White bar with a soft blur and a hairline underneath. */
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 48)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   return (
     <>
-      {/* h-0 so the bar floats over the hero instead of pushing it down. */}
-      <header className="sticky top-3 z-40 h-0 px-3">
-        <nav
-          aria-label="Primary"
-          className={`relative mx-auto flex max-w-4xl items-center justify-between gap-4 rounded-pill py-2 pl-5 pr-2 transition-transform duration-300 ease-out ${
-            scrolled ? 'scale-[0.96]' : ''
-          }`}
-        >
-          <span aria-hidden="true" className="glass absolute inset-0 -z-10 rounded-pill" />
-          <span
-            aria-hidden="true"
-            className={`absolute inset-0 -z-10 rounded-pill bg-canvas/75 backdrop-blur-xl transition-opacity duration-300 ${
-              scrolled ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
+      <header className="sticky top-0 z-40 border-b border-line">
+        <span aria-hidden="true" className="absolute inset-0 -z-10 bg-canvas/80 backdrop-blur-md" />
+        <nav aria-label="Primary" className="relative mx-auto flex max-w-page items-center justify-between gap-4 px-5 py-3 sm:px-8">
           <a href="/#top" className="shrink-0 py-1" aria-label={`${site.brand} home`}>
             <Wordmark className="h-4 w-auto text-ink" decorative />
           </a>
@@ -41,7 +21,7 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="rounded-pill px-3.5 py-2 text-sm text-muted transition-opacity hover:text-ink"
+                  className="rounded-pill px-3.5 py-2 text-sm font-medium text-ink hover:text-brand"
                 >
                   {link.label}
                 </a>

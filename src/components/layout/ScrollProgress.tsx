@@ -19,7 +19,7 @@ export function ScrollProgress() {
     <div
       ref={ref}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-x-0 top-0 z-50 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-cyan to-violet"
+      className="pointer-events-none fixed inset-x-0 top-0 z-50 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-brand to-violet"
     />
   )
 }

@@ -204,7 +204,7 @@ export default function LabIconScene({ activeIndex, running }: { activeIndex: nu
     >
       <ambientLight intensity={0.55} />
       <directionalLight position={[3, 4, 5]} intensity={2.6} />
-      <directionalLight position={[-4, 2, -3]} intensity={1.4} color={tokens.colors.cyan} />
+      <directionalLight position={[-4, 2, -3]} intensity={1.4} color={tokens.colors.brand} />
       <pointLight position={[-2, -3, 2]} intensity={18} color={tokens.colors.violet} />
       <Stage activeIndex={activeIndex} />
     </Canvas>

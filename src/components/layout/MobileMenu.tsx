@@ -86,7 +86,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                       delay: 0.08 + i * tokens.motion.stagger,
                     }}
                   >
-                    <span className="label-mono text-cyan">0{i + 1}</span>
+                    <span className="label-mono text-brand">0{i + 1}</span>
                     {link.label}
                   </m.a>
                 </li>

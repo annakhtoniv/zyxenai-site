@@ -13,11 +13,11 @@ function Card({ product }: { product: Product }) {
       ref={ref}
       style={accentStyle(product)}
       data-card
-      className="glass border-accent relative flex w-[86vw] max-w-[440px] shrink-0 snap-center flex-col overflow-hidden rounded-card p-5"
+      className="card border-accent relative flex w-[86vw] max-w-[440px] shrink-0 snap-center flex-col overflow-hidden rounded-card p-5"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_50%_at_80%_0%,color-mix(in_srgb,var(--accent)_22%,transparent),transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_50%_at_80%_0%,color-mix(in_srgb,var(--accent)_10%,transparent),transparent_70%)]"
       />
       <div className="relative flex items-start justify-between">
         <p aria-hidden="true" className="outline-number font-mono text-6xl font-bold leading-none">
@@ -85,7 +85,7 @@ export function LabCardStack() {
             aria-current={i === active || undefined}
             className="grid h-8 w-8 place-items-center"
           >
-            <span className={`h-1.5 rounded-full transition-[width,background-color] duration-300 ${i === active ? 'w-6 bg-cyan' : 'w-1.5 bg-white/25'}`} />
+            <span className={`h-1.5 rounded-full transition-[width,background-color] duration-300 ${i === active ? 'w-6 bg-brand' : 'w-1.5 bg-ink/25'}`} />
           </button>
         ))}
       </div>

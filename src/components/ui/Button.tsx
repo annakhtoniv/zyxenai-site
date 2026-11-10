@@ -9,8 +9,8 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
 const base =
   'inline-flex items-center justify-center gap-2 rounded-pill font-medium whitespace-nowrap transition-[transform,opacity] duration-200 ease-out will-change-transform'
 const variants = {
-  primary: 'bg-cyan text-canvas hover:opacity-90 shadow-[0_0_32px_-6px_rgba(34,227,255,0.55)]',
-  ghost: 'glass text-ink hover:opacity-80',
+  primary: 'bg-brand text-canvas hover:bg-brandHover',
+  ghost: 'border border-line bg-canvas text-ink hover:bg-surface',
 }
 const sizes = { sm: 'px-4 py-2 text-sm', md: 'px-6 py-3.5 text-base' }
 
